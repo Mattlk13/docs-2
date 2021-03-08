@@ -1,6 +1,8 @@
 ---
 title: Invoke Java UDFs from .NET for Apache Spark application
 description: Learn how to call a Java UDF from a .NET for Apache Spark application.
+ms.author: nidutta
+author: Niharikadutta
 ms.date: 10/09/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
@@ -64,7 +66,7 @@ A basic example to illustrate the above steps:
 4. Submit this application using `spark-submit` by passing the previously compiled Java UDF jar through the `--jars` option:
 
     ```bash
-    spark-submit --master local --jars UdfApp-0.0.1.jar --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-3.0.x-0.12.1.jar InterRuntimeUDFs.exe
+    spark-submit --master local --jars UdfApp-0.0.1.jar --class org.apache.spark.deploy.dotnet.DotnetRunner microsoft-spark-2-4_2.11-1.0.0.jar InterRuntimeUDFs.exe
     ```
 
     The resultant `dfUdf` DataFrame had the number 5 added to each row of the input column as defined by `JavaUdf`:

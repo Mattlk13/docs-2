@@ -7,8 +7,8 @@ ms.date: 09/30/2020
 
 C# is an object-oriented language. Four of the key techniques used in object-oriented programming are:
 
-- *Abstraction* means hiding the unnecessary details from type consumers.
-- *Encapsulation* means that a group of related properties, methods, and other members are treated as a single unit or object.
+- *Abstraction* means that a group of related properties, methods, and other members are treated as a single unit or object.
+- *Encapsulation* means hiding the unnecessary details from type consumers.
 - *Inheritance* describes the ability to create new classes based on an existing class.
 - *Polymorphism* means that you can have multiple classes that can be used interchangeably, even though each class implements the same properties or methods in different ways.
 
@@ -93,7 +93,16 @@ The override applies the monthly deposit set in the constructor. Add the followi
 
 Verify the results. Now, add a similar set of test code for the `LineOfCreditAccount`:
 
-:::code language="csharp" source="./snippets/object-oriented-programming/Program.cs" ID="TestLineOfCredit":::
+```
+    var lineOfCredit = new LineOfCreditAccount("line of credit", 0);
+    // How much is too much to borrow?
+    lineOfCredit.MakeWithdrawal(1000m, DateTime.Now, "Take out monthly advance");
+    lineOfCredit.MakeDeposit(50m, DateTime.Now, "Pay back small amount");
+    lineOfCredit.MakeWithdrawal(5000m, DateTime.Now, "Emergency funds for repairs");
+    lineOfCredit.MakeDeposit(150m, DateTime.Now, "Partial restoration on repairs");
+    lineOfCredit.PerformMonthEndTransactions();
+    Console.WriteLine(lineOfCredit.GetAccountHistory());
+ ```
 
 When you add the preceding code and run the program, you'll see something like the following error:
 
@@ -134,7 +143,7 @@ Notice that the `LineOfCreditAccount` constructor changes the sign of the `credi
 
 The last feature to add enables the `LineOfCreditAccount` to charge a fee for going over the credit limit instead of refusing the transaction.
 
-One technique is to define a virtual function where you implement the required behavior. The `Bank Account` class refactors the `MakeWithdrawal` method into two methods. The new method does the specified action when the withdrawal takes the balance below the minimum. The existing `MakeWithdrawal` method has the following code:
+One technique is to define a virtual function where you implement the required behavior. The `BankAccount` class refactors the `MakeWithdrawal` method into two methods. The new method does the specified action when the withdrawal takes the balance below the minimum. The existing `MakeWithdrawal` method has the following code:
 
 ```csharp
 public void MakeWithdrawal(decimal amount, DateTime date, string note)
@@ -156,7 +165,7 @@ Replace it with the following code:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/BankAccount.cs" ID="RefactoredMakeWithdrawal":::
 
-The added method is  , which means that it can be called only from derived classes. That declaration prevents other clients from calling the method. It's also `virtual` so that derived classes can change the behavior. The return type is a `Transaction?`. The `?` annotation indicates that the method may return `null`. Add the following implementation in the `LineOfCreditAccount` to charge a fee when the withdrawal limit is exceeded:
+The added method is `protected`, which means that it can be called only from derived classes. That declaration prevents other clients from calling the method. It's also `virtual` so that derived classes can change the behavior. The return type is a `Transaction?`. The `?` annotation indicates that the method may return `null`. Add the following implementation in the `LineOfCreditAccount` to charge a fee when the withdrawal limit is exceeded:
 
 :::code language="csharp" source="./snippets/object-oriented-programming/LineOfCreditAccount.cs" ID="AddOverdraftFee":::
 
@@ -167,6 +176,8 @@ The override returns a fee transaction when the account is overdrawn. If the wit
 Run the program, and check the results.
 
 ## Summary
+
+If you got stuck, you can see the source for this tutorial [in our GitHub repo](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/intro-to-csharp/snippets/object-oriented-programming).
 
 This tutorial demonstrated many of the techniques used in Object-Oriented programming:
 

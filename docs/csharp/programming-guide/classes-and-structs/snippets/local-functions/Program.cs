@@ -2,6 +2,8 @@
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace local_functions
 {
@@ -69,7 +71,7 @@ namespace local_functions
         //</FactorialWithLambda>
 
         //<AsyncWithLambda>
-        public Task<string> PerformLongRunningWorkLambda(string address, int index, string name)
+        public async Task<string> PerformLongRunningWorkLambda(string address, int index, string name)
         {
             if (string.IsNullOrWhiteSpace(address))
                 throw new ArgumentException(message: "An address is required", paramName: nameof(address));
@@ -85,12 +87,12 @@ namespace local_functions
                 return $"The results are {interimResult} and {secondResult}. Enjoy.";
             };
 
-            return longRunningWorkImplementation();
+            return await longRunningWorkImplementation();
         }
         //</AsyncWithLambda>
 
         //<AsyncWithLocal>
-        public Task<string> PerformLongRunningWork(string address, int index, string name)
+        public async Task<string> PerformLongRunningWork(string address, int index, string name)
         {
             if (string.IsNullOrWhiteSpace(address))
                 throw new ArgumentException(message: "An address is required", paramName: nameof(address));
@@ -99,7 +101,7 @@ namespace local_functions
             if (string.IsNullOrWhiteSpace(name))
                 throw new ArgumentException(message: "You must supply a name", paramName: nameof(name));
 
-            return longRunningWorkImplementation();
+            return await longRunningWorkImplementation();
 
             async Task<string> longRunningWorkImplementation()
             {
@@ -121,5 +123,25 @@ namespace local_functions
             await Task.Delay(100);
             return 9;
         }
+
+        //<YieldReturn>
+        public IEnumerable<string> SequenceToLowercase(IEnumerable<string> input)
+        {
+            if (!input.Any())
+            {
+                throw new ArgumentException("There are no items to convert to lowercase.");
+            }
+            
+            return LowercaseIterator();
+            
+            IEnumerable<string> LowercaseIterator()
+            {
+                foreach (var output in input.Select(item => item.ToLower()))
+                {
+                    yield return output;
+                }
+            }
+        }
+        //</YieldReturn>
     }
 }

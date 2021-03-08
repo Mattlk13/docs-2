@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Walkthrough: Using BatchBlock and BatchedJoinBlock to Improve Efficiency"
 title: "Walkthrough: Using BatchBlock and BatchedJoinBlock to Improve Efficiency"
 ms.date: "03/30/2017"
-ms.technology: dotnet-standard
 dev_langs:
   - "csharp"
   - "vb"

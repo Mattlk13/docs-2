@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: FunctionLeave2 Function"
 title: "FunctionLeave2 Function"
 ms.date: "03/30/2017"
 api_name: 
@@ -16,6 +17,7 @@ topic_type:
   - "apiref"
 ---
 # FunctionLeave2 Function
+
 Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.  
   
 ## Syntax  
@@ -52,6 +54,7 @@ void __stdcall FunctionLeave2 (
   In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) method to set the event flags.
 
 ## Remarks  
+
  The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.  
   
  The `FunctionLeave2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
@@ -67,6 +70,7 @@ void __stdcall FunctionLeave2 (
  Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl  

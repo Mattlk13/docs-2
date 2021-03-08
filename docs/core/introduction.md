@@ -2,7 +2,7 @@
 title: .NET introduction and overview
 description: Learn about .NET, a free, open-source development platform for building many kinds of apps.
 author: tdykstra
-ms.date: 09/28/2020
+ms.date: 11/16/2020
 ms.custom: "updateeachrelease"
 ---
 # Introduction to .NET
@@ -17,8 +17,8 @@ ms.custom: "updateeachrelease"
   * [Windows WPF](/dotnet/desktop/wpf/)
   * [Windows Forms](/dotnet/desktop/winforms/)
   * [Universal Windows Platform (UWP)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)
-* [Games](https://dotnet.microsoft.com/learn/games/unity-tutorial/intro)
-* [Internet of Things (IoT)](https://dotnet.microsoft.com/apps/iot)
+* [Games](https://dotnet.microsoft.com/apps/games)
+* [Internet of Things (IoT)](../iot/index.yml)
 * [Machine learning](../machine-learning/index.yml)
 * [Console apps](tutorials/with-visual-studio-code.md)
 * [Windows services](/aspnet/core/host-and-deploy/windows-service)
@@ -126,7 +126,7 @@ The integrated development environments for .NET include:
 
 The [.NET SDK](sdk.md) is a set of libraries and tools for developing and running .NET applications.
 
-When you [download .NET](https://dotnet.microsoft.com/download/dotnet-core/), you can choose the SDK or a *runtime*, such as the .NET runtime or the ASP.NET Core runtime. Install a runtime on a machine that you want to prepare for running .NET apps. Install the SDK on a machine that you want to use for development. When you download the SDK, you automatically get the runtimes with it.
+When you [download .NET](https://dotnet.microsoft.com/download/dotnet), you can choose the SDK or a *runtime*, such as the .NET runtime or the ASP.NET Core runtime. Install a runtime on a machine that you want to prepare for running .NET apps. Install the SDK on a machine that you want to use for development. When you download the SDK, you automatically get the runtimes with it.
 
 The SDK download includes the following components:
 
@@ -138,6 +138,13 @@ The SDK download includes the following components:
 * [Runtime libraries](#runtime-libraries). Provides primitive data types and fundamental utilities.
 * The ASP.NET Core runtime. Provides basic services for internet-connected apps, such as web apps, IoT apps, and mobile backends.
 * The desktop runtime. Provides basic services for Windows desktop apps, including Windows Forms and WPF.
+
+The runtime download includes the following components:
+
+* Optionally, the desktop or ASP.NET Core runtime.
+* The [.NET runtime](#clr). Provides a type system, assembly loading, a garbage collector, native interop, and other basic services.
+* [Runtime libraries](#runtime-libraries). Provides primitive data types and fundamental utilities.
+* The `dotnet` [driver](tools/index.md#driver). A CLI command that runs framework-dependent apps.
 
 For more information, see the following resources:
 
@@ -248,7 +255,7 @@ For more information, see [Cleaning up unmanaged resources](../standard/garbage-
 
 * Publishing an app as *self-contained* produces an executable file that includes the .NET [runtime](#sdk-and-runtimes) and [libraries](#runtime-libraries), and the application and its dependencies. Users of the application can run it on a machine that doesn't have the .NET runtime installed. Self-contained apps are platform-specific, and they can optionally be published using a form of [AOT compilation](#aot-compiler).
 
-* Publishing an app as *framework-dependent* produces an executable file and binary files (*.dll* files) that include only the application itself and its dependencies. Users of the application have to separately install the .NET [runtime](#sdk-and-runtimes). The executable file is platform-specific, but The *.dll* files of framework-dependent applications are cross-platform.
+* Publishing an app as *framework-dependent* produces an executable file and binary files (*.dll* files) that include only the application itself and its dependencies. Users of the application have to separately install the .NET [runtime](#sdk-and-runtimes). The executable file is platform-specific, but the *.dll* files of framework-dependent applications are cross-platform.
 
   You can install multiple versions of the runtime side by side to run framework-dependent apps that target different versions of the runtime. For more information, see [Target frameworks](../standard/frameworks.md).
 
@@ -258,9 +265,9 @@ For more information, see [.NET application publishing overview](deploying/index
 
 ## Runtime libraries
 
-.NET has an expansive standard set of class libraries. The core set is referred to as the base class library (BCL). The complete set is referred to as the runtime libraries or framework libraries. These libraries provide implementations for many general-purpose and workload-specific types and utility functionality.
+.NET has an expansive standard set of class libraries, known as [runtime libraries](../standard/glossary.md#runtime), [framework libraries](../standard/glossary.md#framework-libraries), or the [base class library (BCL)](../standard/glossary.md#bcl). These libraries provide implementations for many general-purpose and workload-specific types and utility functionality.
 
-Here are some examples of types defined in the runtime libraries:
+Here are some examples of types defined in the .NET runtime libraries:
 
 * Primitive types, such as <xref:System.Boolean?displayProperty=nameWithType> and <xref:System.Int32?displayProperty=nameWithType>.
 * Collections, such as <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> and <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
@@ -270,9 +277,9 @@ Here are some examples of types defined in the runtime libraries:
 * [Serialization](../standard/serialization/index.md) utility types, such as <xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> and <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 * High-performance types, such as <xref:System.Span%601?displayProperty=nameWithType>, <xref:System.Numerics.Vector?displayProperty=nameWithType>, and [Pipelines](../standard/io/pipelines.md).
 
-For more information, see [Framework libraries](../standard/framework-libraries.md) and [the source code for the libraries](https://github.com/dotnet/runtime/tree/master/src/libraries).
+For more information, see the [Runtime libraries overview](../standard/runtime-libraries-overview.md). The source code for the libraries is in [the GitHub dotnet/runtime repository](https://github.com/dotnet/runtime/tree/master/src/libraries).
 
-## Microsoft.Extensions libraries
+### Extensions to the runtime libraries
 
 Libraries for some commonly used application functionality aren't included in the runtime libraries but are made available in NuGet packages, such as the following:
 
@@ -314,7 +321,7 @@ In 2014, Microsoft began writing a cross-platform, open-source successor to .NET
 
 This article is about .NET 5, but much of the documentation for .NET 5 still has references to ".NET Core" or ".NET Framework". In addition, "Core" remains in the names [ASP.NET Core](/aspnet/core/) and [Entity Framework Core](/ef/core/).
 
-The documentation also refers to .NET Standard. The [.NET Standard](../standard/net-standard.md) is an API specification that lets you develop class libraries for multiple implementations of .NET.
+The documentation also refers to .NET Standard. [.NET Standard](../standard/net-standard.md) is an API specification that lets you develop class libraries for multiple implementations of .NET.
 
 For more information, see [.NET architectural components](../standard/components.md).
 
@@ -327,7 +334,7 @@ Some of the terminology for .NET can be confusing because the same word is used 
   |Context  |"runtime" meaning |
   |---------|---------|
   | [Common Language Runtime (CLR)](#clr)| The execution environment for a managed program. The OS is part of the runtime environment but isn't part of the .NET runtime. |
-  | [.NET runtime on the .NET download page](https://dotnet.microsoft.com/download/dotnet-core) | The [CLR](#clr) and [runtime libraries](#runtime-libraries), which together provide support for running [framework-dependent](#deployment-models) apps. The page also offers runtime choices for ASP.NET Core server apps and Windows desktop apps. |
+  | [.NET runtime on the .NET download page](https://dotnet.microsoft.com/download/dotnet) | The [CLR](#clr) and [runtime libraries](#runtime-libraries), which together provide support for running [framework-dependent](#deployment-models) apps. The page also offers runtime choices for ASP.NET Core server apps and Windows desktop apps. |
   | [Runtime Identifier (RID)](rid-catalog.md) | The OS platform and CPU architecture that a .NET app runs on. For example: Windows x64, Linux x64. |
 
 * **framework**
@@ -337,8 +344,9 @@ Some of the terminology for .NET can be confusing because the same word is used 
   | .NET Framework | The original, Windows-only implementation of .NET. "Framework" is capitalized. |
   | target framework | The collection of APIs that a .NET app or library relies on. Examples: .NET Core 3.1, .NET Standard 2.0 |
   | Target Framework Moniker (TFM)  | A TFM is a standardized token format for specifying the target framework of a .NET app or library. Example: `net462` for .NET Framework 4.6.2. |
-  | framework-dependent app | An app that can only run on a machine where you've installed the runtime from the [.NET download page](https://dotnet.microsoft.com/download/dotnet-core). "Framework" in this usage is the same thing as the "runtime" that you download from the .NET download page. |
-  
+  | framework-dependent app | An app that can only run on a machine where you've installed the runtime from the [.NET download page](https://dotnet.microsoft.com/download/dotnet). "Framework" in this usage is the same thing as the "runtime" that you download from the .NET download page. |
+  | framework libraries | Sometimes used as a synonym for [runtime libraries](#runtime-libraries). |
+
 * **SDK**
 
   |Context  | "SDK" meaning |

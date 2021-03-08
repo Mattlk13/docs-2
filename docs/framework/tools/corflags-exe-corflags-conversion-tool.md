@@ -9,9 +9,10 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 ---
 # CorFlags.exe (CorFlags Conversion Tool)
+
 The CorFlags Conversion tool allows you to configure the CorFlags section of the header of a portable executable image.  
   
- This tool is automatically installed with Visual Studio. To run the tool, use the Developer Command Prompt for Visual Studio (or the Visual Studio Command Prompt in Windows 7). For more information, see [Command Prompts](developer-command-prompt-for-vs.md).  
+ This tool is automatically installed with Visual Studio. To run the tool, use a [command-line shell for developers](/visualstudio/ide/reference/command-prompt-powershell).  
   
  At the command prompt, type the following:  
   
@@ -43,10 +44,11 @@ CorFlags.exe assembly [options]
 |`-UpgradeCLRHeader`|Upgrades the CLR header version to 2.5. **Note:**  Assemblies must have a CLR header version of 2.5 or greater to run natively.|  
   
 ## Remarks  
+
  If no options are specified, the CorFlags Conversion tool displays the flags for the specified assembly.  
   
 ## See also
 
 - [Tools](index.md)
 - [64-bit Applications](../64-bit-apps.md)
-- [Command Prompts](developer-command-prompt-for-vs.md)
+- [Developer command-line shells](/visualstudio/ide/reference/command-prompt-powershell)

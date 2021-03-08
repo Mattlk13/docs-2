@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ICorProfilerCallback::AppDomainCreationStarted Method"
 title: "ICorProfilerCallback::AppDomainCreationStarted Method"
 ms.date: "03/30/2017"
 api_name: 
@@ -17,6 +18,7 @@ topic_type:
   - "apiref"
 ---
 # ICorProfilerCallback::AppDomainCreationStarted Method
+
 Notifies the profiler that an application domain is being created.  
   
 ## Syntax  
@@ -33,9 +35,11 @@ HRESULT AppDomainCreationStarted(
   \[in] Identifies the domain which is being created.
   
 ## Remarks  
+
  The ID is not valid for any information request until the [ICorProfilerCallback::AppDomainCreationFinished](icorprofilercallback-appdomaincreationfinished-method.md) method is called.  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

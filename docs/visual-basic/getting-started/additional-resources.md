@@ -2,7 +2,7 @@
 title: "Additional resources for Visual Basic programmers"
 description: "Discover resources on the web for you to learn, ask questions and find out more information about Visual Basic."
 ms.date: 02/21/2018
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Visual Basic, additional resources"
   - "resources [Visual Basic], additional"
   - "Help, Visual Basic Web sites"
@@ -27,12 +27,13 @@ The following web sites provide guidance and can help you find answers to common
 |URL|Description|
 |----------|----------------|
 |[Visual Basic documentation samples](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|Contains the samples used throughout the Visual Basic and .NET documentation.|
+|[Samples browser](https://docs.microsoft.com/samples/browse/?languages=vb)|Contains code samples written in Visual Basic|
 
 ### Forums
 
 |URL|Description|
 |----------|----------------|
-|[Visual Basic Forums](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Discusses general Visual Basic issues.|
+|[Microsoft Q&A](https://docs.microsoft.com/answers/topics/dotnet-visual-basic.html)|Technical questions about Visual Basic programming language.|
 
 ### Videos and webcasts
 
@@ -45,7 +46,7 @@ The following web sites provide guidance and can help you find answers to common
 |URL|Description|
 |----------|----------------|
 |[Microsoft Support](https://support.microsoft.com)|Provides access to Knowledge Base (KB) articles, downloads and updates, support webcasts, and other services.|
-|[Visual Studio Questions](https://developercommunity.visualstudio.com)|Enables you to file bugs or provide suggestions to Microsoft about .NET and Visual Studio. You can also report a bug by selecting **Help** > **Send Feedback** > **Report a Problem** in Visual Studio.|
+|[Visual Studio Questions](https://aka.ms/feedback/report?space=61)|Enables you to file bugs or provide suggestions to Microsoft about .NET and Visual Studio. You can also report a bug by selecting **Help** > **Send Feedback** > **Report a Problem** in Visual Studio.|
 
 ## Third-party resources
 
@@ -58,4 +59,4 @@ The following web sites provide guidance and can help you find answers to common
 ## See also
 
 - [Get started with Visual Basic](index.md)
-- [Talk to Us](/visualstudio/ide/feedback-options)
+- [Visual Studio feedback options](/visualstudio/ide/feedback-options)

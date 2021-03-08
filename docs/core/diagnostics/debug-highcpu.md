@@ -25,7 +25,7 @@ In this tutorial, you will:
 
 The tutorial uses:
 
-- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core) or a later version.
+- [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet) or a later version.
 - [Sample debug target](/samples/dotnet/samples/diagnostic-scenarios) to trigger the scenario.
 - [dotnet-trace](dotnet-trace.md) to list processes and generate a profile.
 - [dotnet-counters](dotnet-counters.md) to monitor cpu usage.
@@ -85,7 +85,7 @@ With the web app running, immediately after startup, the CPU isn't being consume
 Now, rerun the [dotnet-counters](dotnet-counters.md) command. To monitor just the `cpu-usage`, specify `System.Runtime[cpu-usage]` as part of the command.
 
 ```dotnetcli
-dotnet-counters monitor System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
+dotnet-counters monitor --counters System.Runtime[cpu-usage] -p 22884 --refresh-interval 1
 ```
 
 You should see an increase in CPU usage as shown below:

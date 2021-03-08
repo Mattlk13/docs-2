@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CorOpenFlags Enumeration"
 title: "CorOpenFlags Enumeration"
 ms.date: "03/30/2017"
 api_name: 
@@ -16,6 +17,7 @@ topic_type:
   - "apiref"
 ---
 # CorOpenFlags Enumeration
+
 Contains flag values that control metadata behavior upon opening manifest files.  
   
 ## Syntax  
@@ -59,6 +61,7 @@ typedef enum CorOpenFlags
 |`ofReserved`|Reserved for internal use.|  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  

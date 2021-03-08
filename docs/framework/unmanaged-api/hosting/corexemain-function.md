@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: _CorExeMain Function"
 title: "_CorExeMain Function"
 ms.date: "03/30/2017"
 api_name: 
@@ -19,6 +20,7 @@ topic_type:
   - "apiref"
 ---
 # _CorExeMain Function
+
 Initializes the common language runtime (CLR), locates the managed entry point in the executable assembly's CLR header, and begins execution.  
   
 ## Syntax  
@@ -28,6 +30,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
 ```  
   
 ## Remarks  
+
  This function is called by the loader in processes created from managed executable assemblies. For DLL assemblies, the loader calls the [_CorDllMain](cordllmain-function.md) function instead.  
   
  The operating system loader calls this method regardless of the entry point specified in the image file.  
@@ -37,6 +40,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain ();
  For additional information, see the Remarks section in the [_CorValidateImage](corvalidateimage-function.md) topic.  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** Cor.h  

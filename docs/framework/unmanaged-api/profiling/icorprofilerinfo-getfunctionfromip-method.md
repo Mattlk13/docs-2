@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ICorProfilerInfo::GetFunctionFromIP Method"
 title: "ICorProfilerInfo::GetFunctionFromIP Method"
 ms.date: "03/30/2017"
 api_name: 
@@ -17,6 +18,7 @@ topic_type:
   - "apiref"
 ---
 # ICorProfilerInfo::GetFunctionFromIP Method
+
 Maps a managed code instruction pointer to a `FunctionID`.  
   
 ## Syntax  
@@ -38,6 +40,7 @@ HRESULT GetFunctionFromIP(
   \[out] The returned function ID.
 
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

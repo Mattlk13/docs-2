@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: IHostTaskManager::EnterRuntime Method"
 title: "IHostTaskManager::EnterRuntime Method"
 ms.date: "03/30/2017"
 api_name: 
@@ -17,6 +18,7 @@ topic_type:
   - "apiref"
 ---
 # IHostTaskManager::EnterRuntime Method
+
 Notifies the host that a call to an unmanaged method, such as a platform invoke method, is returning execution control to the common language runtime (CLR).  
   
 ## Syntax  
@@ -38,12 +40,14 @@ HRESULT EnterRuntime ();
 |E_OUTOFMEMORY|Not enough memory was available to complete the requested allocation.|  
   
 ## Remarks  
+
  `EnterRuntime` is called to notify the host that an unmanaged function, for which an earlier call to the [LeaveRuntime](ihosttaskmanager-leaveruntime-method.md) method was made, has finished executing, and is returning execution control to the runtime.  
   
 > [!NOTE]
 > [ReverseEnterRuntime](ihosttaskmanager-reverseenterruntime-method.md) is called to notify the host that an unmanaged function, for which an earlier call to `LeaveRuntime` was made, is making a call into managed code.  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** MSCorEE.h  

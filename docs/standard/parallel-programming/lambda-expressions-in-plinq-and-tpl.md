@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: Lambda Expressions in PLINQ and TPL"
 title: "Lambda Expressions in PLINQ and TPL"
 ms.date: "03/30/2017"
-ms.technology: dotnet-standard
 dev_langs:
   - "csharp"
   - "vb"

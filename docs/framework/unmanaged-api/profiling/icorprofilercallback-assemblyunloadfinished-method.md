@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ICorProfilerCallback::AssemblyUnloadFinished Method"
 title: "ICorProfilerCallback::AssemblyUnloadFinished Method"
 ms.date: "03/30/2017"
 api_name: 
@@ -17,6 +18,7 @@ topic_type:
   - "apiref"
 ---
 # ICorProfilerCallback::AssemblyUnloadFinished Method
+
 Notifies the profiler that an assembly has been unloaded.  
   
 ## Syntax  
@@ -38,11 +40,13 @@ HRESULT AssemblyUnloadFinished(
   \[in] An HRESULT that indicates whether the assembly was unloaded successfully.
 
 ## Remarks  
+
  The value of `assemblyId` is not valid for an information request after the [ICorProfilerCallback::AssemblyUnloadStarted](icorprofilercallback-assemblyunloadstarted-method.md) method returns.  
   
  Some parts of unloading the assembly might continue after the `AssemblyUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the assembly has succeeded.  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

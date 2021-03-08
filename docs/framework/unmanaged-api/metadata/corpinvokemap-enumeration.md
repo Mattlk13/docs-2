@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: CorPinvokeMap Enumeration"
 title: "CorPinvokeMap Enumeration"
 ms.date: "03/30/2017"
 api_name: 
@@ -16,6 +17,7 @@ topic_type:
   - "apiref"
 ---
 # CorPinvokeMap Enumeration
+
 Specifies options for a PInvoke call.  
   
 ## Syntax  
@@ -83,6 +85,7 @@ typedef enum  CorPinvokeMap {
 |`pmMaxValue`|Reserved.|  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorHdr.h  

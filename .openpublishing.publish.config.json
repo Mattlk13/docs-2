@@ -76,8 +76,8 @@
       "branch": "master"
     },
     {
-      "path_to_root": "dotnet-samples",
-      "url": "https://github.com/dotnet/samples",
+      "path_to_root": "iot-samples",
+      "url": "https://github.com/MicrosoftDocs/dotnet-iot-assets",
       "branch": "master"
     }
   ],

@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: How to: Create GenericPrincipal and GenericIdentity Objects"
 title: "How to: Create GenericPrincipal and GenericIdentity Objects"
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs:
   - "csharp"
   - "vb"

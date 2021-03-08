@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ICorProfilerCallback8::DynamicMethodJITCompilationStarted Method"
 title: "ICorProfilerCallback8::DynamicMethodJITCompilationStarted Method"
 ms.date: "04/10/2018"
 api_name: 
@@ -10,6 +11,7 @@ api_type:
   - "COM"
 ---
 # ICorProfilerCallback8::DynamicMethodJITCompilationStarted Method
+
 [Supported in the .NET Framework 4.7 and later versions]  
   
 Notifies the profiler whenever JIT compilation of a dynamic method has started.  
@@ -26,6 +28,7 @@ HRESULT DynamicMethodJITCompilationStarted(
 ```  
   
 ## Parameters  
+
 [in] `functionId`  
 The identifier of the in-memory function for which JIT compilation is started.
 
@@ -48,6 +51,7 @@ This callback is triggered whenever a dynamic method is JIT-compiled. This inclu
 The `pILHeader` pointer is only valid during the callback.
 
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

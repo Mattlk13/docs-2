@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ICorProfilerCallback::ClassLoadStarted Method"
 title: "ICorProfilerCallback::ClassLoadStarted Method"
 ms.date: "03/30/2017"
 api_name: 
@@ -17,6 +18,7 @@ topic_type:
   - "apiref"
 ---
 # ICorProfilerCallback::ClassLoadStarted Method
+
 Notifies the profiler that a class is being loaded.  
   
 ## Syntax  
@@ -33,9 +35,11 @@ HRESULT ClassLoadStarted(
   \[in] Identifies the class that is being loaded.
 
 ## Remarks  
+
  The value of `classId` is not valid for an information request until the [ICorProfilerCallback::ClassLoadFinished](icorprofilercallback-classloadfinished-method.md) method is called.  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ICorProfilerCallback::AppDomainCreationFinished Method"
 title: "ICorProfilerCallback::AppDomainCreationFinished Method"
 ms.date: "03/30/2017"
 api_name: 
@@ -17,6 +18,7 @@ topic_type:
   - "apiref"
 ---
 # ICorProfilerCallback::AppDomainCreationFinished Method
+
 Notifies the profiler that an application domain has been created.  
   
 ## Syntax  
@@ -38,11 +40,13 @@ HRESULT AppDomainCreationFinished(
   \[in] An HRESULT that indicates whether creation of the application domain completed successfully.
 
 ## Remarks  
+
  The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
   
  Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

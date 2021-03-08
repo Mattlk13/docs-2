@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: How to: Verify the Digital Signatures of XML Documents"
 title: "How to: Verify the Digital Signatures of XML Documents"
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs: 
   - "csharp"
   - "vb"

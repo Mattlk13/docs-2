@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ICorProfilerCallback::JITCompilationFinished Method"
 title: "ICorProfilerCallback::JITCompilationFinished Method"
 ms.date: "03/30/2017"
 api_name: 
@@ -17,6 +18,7 @@ topic_type:
   - "apiref"
 ---
 # ICorProfilerCallback::JITCompilationFinished Method
+
 Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
   
 ## Syntax  
@@ -45,6 +47,7 @@ HRESULT JITCompilationFinished(
   Although a value of `true` will not harm the runtime, it can skew the profiling results.
 
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  

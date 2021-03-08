@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: How to: Create a WindowsPrincipal Object"
 title: "How to: Create a WindowsPrincipal Object"
 ms.date: 07/15/2020
-ms.technology: dotnet-standard
 dev_langs: 
   - "csharp"
   - "vb"

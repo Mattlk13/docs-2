@@ -1,7 +1,7 @@
 ---
+description: "Learn more about: How to: Encrypt XML Elements with Symmetric Keys"
 title: "How to: Encrypt XML Elements with Symmetric Keys"
 ms.date: 07/14/2020
-ms.technology: dotnet-standard
 dev_langs: 
   - "csharp"
   - "vb"

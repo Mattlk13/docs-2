@@ -1,4 +1,5 @@
 ---
+description: "Learn more about: ICorProfilerCallback::ClassUnloadFinished Method"
 title: "ICorProfilerCallback::ClassUnloadFinished Method"
 ms.date: "03/30/2017"
 api_name: 
@@ -17,6 +18,7 @@ topic_type:
   - "apiref"
 ---
 # ICorProfilerCallback::ClassUnloadFinished Method
+
 Notifies the profiler that a class has finished unloading.  
   
 ## Syntax  
@@ -38,9 +40,11 @@ HRESULT ClassUnloadFinished(
   \[in] An HRESULT that indicates whether the class was unloaded successfully.
   
 ## Remarks  
+
  Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
   
 ## Requirements  
+
  **Platforms:** See [System Requirements](../../get-started/system-requirements.md).  
   
  **Header:** CorProf.idl, CorProf.h  
